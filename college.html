@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Page</title>
+    <link rel="stylesheet" href="css/CollegeStyles.css">
+    <style>
+        .clubs-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .club {
+            text-align: center;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .club img {
+            max-width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- College Image Section -->
+    <section class="college-image">
+        <img src="college.jpg" alt="College Image">
+        <h1>College of Engineering Thalassery</h1>
+    </section>
+
+    <!-- Clubs Section -->
+    <section class="clubs-section">
+        <h2>College Clubs</h2>
+        <div class="clubs-container">
+            <!-- Club items will be dynamically inserted -->
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 <span class="college-name">Your College Name</span>. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Dynamic club data (can be fetched from a backend in the future)
+        const clubs = [
+            { name: "Mulearn", img: "club1.png" },
+            { name: "IEDC", img: "club2.png" },
+            { name: "IEEE", img: "club3.png" },
+            { name: "GDSC", img: "club4.png" }
+        ];
+
+        const clubsContainer = document.querySelector(".clubs-container");
+
+        clubs.forEach(club => {
+            const clubDiv = document.createElement("div");
+            clubDiv.classList.add("club");
+            clubDiv.innerHTML = `<img src="${club.img}" alt="${club.name} Logo"><p>${club.name}</p>`;
+            clubsContainer.appendChild(clubDiv);
+        });
+    </script>
+</body>
+</html>
