@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AspireHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">AspireHub.</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#mentors">Mentors</a></li>
+            <li><a href="colleges.html">Colleges</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <a href="#profile" class="login-btn">Login</a>
+    </header>
+
+    <section class="hero">
+        <!-- Swiper Container -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url('img/carousel-1.jpg');"></div>
+                <div class="swiper-slide" style="background-image: url('img/carousel-2.jpg');"></div>
+                <div class="swiper-slide" style="background-image: url('img/carousel-3.jpg');"></div>
+            </div>
+        </div>
+    
+        <!-- Overlay for Better Text Visibility -->
+        <div class="hero-overlay"></div>
+    
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1>Connect. Learn. Grow.</h1>
+            <p>Join the mentorship program and elevate your skills.</p>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+    </section>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'fade',
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            speed: 1000, // Smooth fade transition
+        });
+    </script>
+    
+    
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left Section: Contact Info -->
+            <div class="footer-left">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p><strong>Global Mentorship Hub</strong><br>123 Knowledge Avenue</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>+1 987 6543210</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p><a href="mailto:contact@mentorship.com">contact@mentorship.com</a></p>
+                </div>
+            </div>
+    
+            <!-- Right Section: About & Social Media -->
+            <div class="footer-right">
+                <h3>About the Platform</h3>
+                <p>Bridging the gap between juniors and seniors through structured mentorship. Learn, collaborate, and grow with expert guidance.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
